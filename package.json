@@ -15,6 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "@xyzendev/baileys": "latest",
+    "@bochilteam/scraper-downloader": "^1.0.2",
     "chalk": "^5.3.0",
     "d-scrape": "^1.2.0",
     "file-type": "^19.0.0",
