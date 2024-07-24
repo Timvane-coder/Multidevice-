@@ -28,7 +28,7 @@ const Connecting = async () => {
     const client = makeWASocket.default({
         version,
         logger,
-        printQRInTerminal: !config.settings.pairing_code,
+        printQRInTerminal:true,
         auth: {
             creds: state.creds,
             keys: makeCacheableSignalKeyStore(state.keys, logger),
