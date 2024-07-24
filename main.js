@@ -14,6 +14,16 @@ import pino from "pino";
 import smsg, { Module } from "./core/systems/serialize.js";
 import fs from "fs"
 import { exec } from "child_process";
+import express from "express";
+import http from "http";
+
+const app = new express();
+let PORT = process.env.PORT || 3000
+
+app.get('/', function (req, res) {
+  res.send('online');
+});
+
 
 const logger = pino({ timestamp: () => `,"time":"${new Date().toJSON()}"` }).child({ class: "xyzen" }); logger.level = "silent"
 
@@ -228,3 +238,10 @@ const Connecting = async () => {
 }
 
 Connecting()
+app.listen(PORT, () => {
+  console.log('App listened on port:', PORT)
+})
+
+setInterval(function() {
+  http.get("http://liniadeploy-1622d9568914.herokuapp.com");
+}, 300000);
