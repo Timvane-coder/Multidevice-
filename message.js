@@ -5,7 +5,7 @@
  *  My Instagram : https://instagram.com/xyzencode
  *  My Youtube : https://youtube.com/@xyzencode
 */
-
+import { mediafiredl } from '@bochilteam/scraper-downloader';
 import baileys from "@xyzendev/baileys";
 import config from "./core/config/index.js"
 import mess from "./core/config/mess.js"
@@ -389,22 +389,18 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 });
             }
                 break
-            case 'mediafire':
+            case 'play':
             case 'mf': {
                 if (!m.text) return client.reply(m.from, mess.media.url, m);
-                if (/mediafire.com/.test(m.text)) return client.reply(m.from, 'Invalid URL', m);
-                const res = await dScrape.downloader.mediafire(m.text);
+                if (!/mediafire.com/i.test(m.text)) return client.reply(m.from, 'Invalid URL', m);
+                const res = await mediafiredl(m.text);
                 const size = 0
-                if (res.size.includes('GB')) return size = parseInt(res.size) * 1024
-                if (res.size.includes('MB')) return size = parseInt(res.size)
-
-                if (size > 100) return client.reply(m.from, 'File too large', m)
+                if (size > 150) return client.reply(m.from, 'File too large', m)
                 await client.sendMessage(m.from, {
-                    document: {
+                    video: {
                         url: res.url,
-                        mimetype: "application/" + res.title.split('.').pop(),
-                        filename: res.title,
-                        caption: `*Title:* ${res.title}\n*Size:* ${res.size}\n*Download:* ${res.url}`
+                        mimetype: "video/mp4",
+                        caption: `*Size:* ${res.size}\n*Download:* ${res.url}`
                     }
                 })
             }
