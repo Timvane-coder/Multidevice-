@@ -10,7 +10,7 @@ import { fileURLToPath } from "url";
 import { watchFile, unwatchFile } from "fs";
 
 export default {
-    bot: "62xxxxxx",
+    bot: "265997892606",
     owner: ["6289513081052"],
 }
 
