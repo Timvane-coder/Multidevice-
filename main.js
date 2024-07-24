@@ -15,7 +15,7 @@ import smsg, { Module } from "./core/systems/serialize.js";
 import fs from "fs"
 import { exec } from "child_process";
 
-const logger = pino({ timestamp: () => `,"time":"${new Date().toJSON()}"` }).child({ class: "xyzen" }); logger.level = "fatal"
+const logger = pino({ timestamp: () => `,"time":"${new Date().toJSON()}"` }).child({ class: "xyzen" }); logger.level = "silent"
 
 const store = makeInMemoryStore({ logger })
 
