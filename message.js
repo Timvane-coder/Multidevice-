@@ -93,13 +93,13 @@ export default async function message(client, store, m, chatUpdate) {
                     // fileLength: await new Date(),
                     // pageCount: await new Date().getFullYear(),
                     caption: txt,
-                    // mimetype: 'image/png',
+                    mimetype: 'image/jpg',
                     // jpegThumbnail: await client.resize('https://telegra.ph/file/d240be21a98f41a3bbc8c.jpg', 400, 400),
                     contextInfo: {
                         externalAdReply: {
                             title: 'Zayden AI',
                             body: 'Powered By Zayden',
-                            thumbnail: readFileSync('./core/storage/image/image-1.png'),
+                            thumbnail: readFileSync('./core/storage/image/mine.jpg'),
                             sourceUrl: null,
                             mediaType: 1,
                             renderLargerThumbnail: true,
@@ -145,7 +145,7 @@ export default async function message(client, store, m, chatUpdate) {
                     contextInfo: {
                         externalAdReply: {
                             title: "MIT License",
-                            body: 'Copyright (c) 2024 Muhammad Adriansyah',
+                            body: 'Copyright (c) 2024 Prince Sumani',
                             thumbnail: readFileSync('./core/storage/image/mine.jpg'),
                             showAdAttribution: true,
                             renderLargerThumbnail: true,
