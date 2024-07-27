@@ -747,7 +747,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                 await client.reply(m.from, txt, m)
             }
                 break
-            case 'zayden': {
+            case 'iceking': {
                 if (!quoted) return client.reply(m.from, 'Reply to the message.', m);
                 await client.reply(m.from, JSON.stringify(store.messages[m.from].array.find(v => v.key.id === quoted.key.id), null, 2), m)
             }
