@@ -93,13 +93,13 @@ export default async function message(client, store, m, chatUpdate) {
                     // fileLength: await new Date(),
                     // pageCount: await new Date().getFullYear(),
                     caption: txt,
-                    mimetype: 'image/jpg',
+                    //mimetype: 'image/ppg',
                     // jpegThumbnail: await client.resize('https://telegra.ph/file/d240be21a98f41a3bbc8c.jpg', 400, 400),
                     contextInfo: {
                         externalAdReply: {
                             title: 'Zayden AI',
                             body: 'Powered By Zayden',
-                            thumbnail: readFileSync('./core/storage/image/mine.jpg'),
+                            thumbnail: readFileSync('./core/storage/image/api.png'),
                             sourceUrl: null,
                             mediaType: 1,
                             renderLargerThumbnail: true,
@@ -146,7 +146,7 @@ export default async function message(client, store, m, chatUpdate) {
                         externalAdReply: {
                             title: "MIT Whatsapp Business License",
                             body: 'Copyright (c) 2024 Prince Sumani',
-                            thumbnail: readFileSync('./core/storage/image/mine.jpg'),
+                            thumbnail: readFileSync('./core/storage/image/api.png'),
                             showAdAttribution: true,
                             renderLargerThumbnail: true,
                             mediaType: 1
