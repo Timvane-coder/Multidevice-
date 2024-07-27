@@ -146,7 +146,7 @@ export default async function message(client, store, m, chatUpdate) {
                         externalAdReply: {
                             title: "MIT License",
                             body: 'Copyright (c) 2024 Muhammad Adriansyah',
-                            thumbnail: readFileSync('./core/storage/image/MIT.png'),
+                            thumbnail: readFileSync('./core/storage/image/mine.jpg'),
                             showAdAttribution: true,
                             renderLargerThumbnail: true,
                             mediaType: 1
